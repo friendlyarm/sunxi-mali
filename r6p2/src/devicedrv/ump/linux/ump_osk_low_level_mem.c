@@ -65,7 +65,7 @@ static unsigned long ump_cpu_page_fault_handler(struct vm_area_struct *vma, unsi
 {
 #if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,26)
 	void __user *address;
-	address = vmf->virtual_address;
+	address = vmf->address;
 #endif
 	MSG_ERR(("Page-fault in UMP memory region caused by the CPU\n"));
 	MSG_ERR(("VMA: 0x%08lx, virtual address: 0x%08lx\n", (unsigned long)vma, address));

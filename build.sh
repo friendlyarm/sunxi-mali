@@ -38,6 +38,9 @@ unapply_patches() {
 
 
 build_driver() {
+    #local driver_dir=$(pwd)/$RELEASE/src/devicedrv/ump/
+    #make $BUILD_OPTS -C $driver_dir
+
     local driver_dir=$(pwd)/$RELEASE/src/devicedrv/mali/
 
     make $BUILD_OPTS -C $driver_dir
